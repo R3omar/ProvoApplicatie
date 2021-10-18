@@ -12,11 +12,11 @@ public class KennisToets {
     private ArrayList<Vraag> vragenSet = new ArrayList<>();
 
     public KennisToets() {
-        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(), "vraag1", 999));
-        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(), "vraag2", 888));
-        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(), "vraag3", 777));
-        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(), "vraag4", 666));
-        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(), "vraag5", 555));
+        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(1), "Wat is A", 6, new String[]{"A: b", "B: c", "C: 0", "D: A"}));
+        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(1), "vraag2", 888, new String[]{"A: b", "B: c", "C: 0", "D: A"}));
+        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(1), "vraag3", 777, new String[]{"A: b", "B: c", "C: 0", "D: A"}));
+        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(1), "vraag4", 666, new String[]{"A: b", "B: c", "C: 0", "D: A"}));
+        vragenSet.add(new meerkeuzeVraag(new meerkeuzeAntwoord(1), "vraag5", 555, new String[]{"A: b", "B: c", "C: 0", "D: A"}));
 
     }
 

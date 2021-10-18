@@ -8,6 +8,7 @@ public class provoApplication {
 
 
     public static void main(String[] args) {
+        //noinspection InfiniteLoopStatement
         while(true) {
             toets.doeKennisToets();
         }
