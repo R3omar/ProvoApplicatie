@@ -1,5 +1,6 @@
 package com.re0mar.ooad.vragen;
 
+import com.re0mar.ooad.Punten.IPuntenSysteem;
 import com.re0mar.ooad.antwoorden.IAntwoord;
 
 import java.lang.constant.Constable;
@@ -8,7 +9,7 @@ public class meerkeuzeVraag extends Vraag{
 
     private String[] opties;
 
-    public meerkeuzeVraag(IAntwoord antwoord, String vraag, int punten, String[] opties) {
+    public meerkeuzeVraag(IAntwoord antwoord, String vraag, IPuntenSysteem punten, String[] opties) {
         super(antwoord, vraag, punten);
         this.opties = opties;
     }
@@ -17,13 +18,15 @@ public class meerkeuzeVraag extends Vraag{
     public String getVraag() {
         StringBuilder response = new StringBuilder(super.vraag);
 
-        for (String s: opties) {
+        for (int i=0; i< opties.length; i++) {
             response.append("\n");
-            response.append(s);
+            response.append(i);
+            response.append(". ");
+            response.append(opties[i]);
         }
 
         response.append("\n\n");
-        response.append("Antwoord:");
+        response.append("Nummer van correcte optie:");
 
         return response.toString();
     }
