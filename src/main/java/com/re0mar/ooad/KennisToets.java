@@ -19,9 +19,9 @@ public class KennisToets {
 
     public KennisToets(ITaal taal) {
         this.taal = taal;
-        vragenSet.add(new meerkeuzeVraag(taal, new meerkeuzeAntwoord(1), "Wat is A", new BasicPuntenSysteem(6), new String[]{"b", "c", "0", "A"}));
-        vragenSet.add(new kortVraag(taal, new kortAntwoord(new String[]{"antwoord", "answer", "cheat"}), "Type answer", new BasicPuntenSysteem(9)));
-        vragenSet.add(new kortVraag(taal, new kortAntwoord(new String[]{"antwoord", "answer", "cheat"}), "Type answer", new BasicPuntenSysteem(9)));
+        vragenSet.add(new meerkeuzeVraag(taal, new meerkeuzeAntwoord(1), "Wat is A", new BasicPuntenSysteem(6), new String[]{"b", "c", "0", "A", "c", "0", "A", "c", "0", "A", "c", "0", "A", "c", "0", "A", "c", "0", "A", "c", "0", "A"}));
+        vragenSet.add(new kortVraag(taal, new kortAntwoord(new String[]{"antwoord", "answer"}), "Type answer", new BasicPuntenSysteem(9)));
+        vragenSet.add(new kortVraag(taal, new kortAntwoord(new String[]{"antwoord", "answer"}), "Type answer", new BasicPuntenSysteem(9)));
     }
 
     public void doeKennisToets() {
