@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class provoApplication {
 
-    private static ArrayList<KennisToets> toetsen = new ArrayList<>();
+    private static final ArrayList<KennisToets> toetsen = new ArrayList<>();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,8 +25,6 @@ public class provoApplication {
                 System.out.println(toets.getInfo());
             }
         }
-
-
 
         //noinspection InfiniteLoopStatement
         while (true) {
