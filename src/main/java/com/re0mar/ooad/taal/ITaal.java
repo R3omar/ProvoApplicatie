@@ -11,4 +11,6 @@ public interface ITaal {
     public String getGoodResponse(int punt);
 
     public String getBadResponse(int punt);
+
+    public String getTestInfo(String name, String code);
 }
