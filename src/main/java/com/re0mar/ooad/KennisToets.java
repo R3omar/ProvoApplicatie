@@ -33,16 +33,16 @@ public class KennisToets {
         Scanner sc = new Scanner(System.in);
         System.out.println(taal.getToetsIntro(code));
         if (Objects.equals(sc.next(), "start")) {
-        for (Vraag v: vragenSet) {
-            System.out.println(v.getVraag());
-            String answer = sc.nextLine();
-            if (v.checkAntwoord(answer) || Objects.equals(answer, "cheat")) {
-                punten += v.getPunten();
-                System.out.println(taal.getGoodResponse(punten));
-            } else {
-                System.out.println(taal.getBadResponse(punten));
+            for (Vraag v : vragenSet) {
+                System.out.println(v.getVraag());
+                String answer = sc.nextLine();
+                if (v.checkAntwoord(answer) || Objects.equals(answer, "cheat")) {
+                    punten += v.getPunten();
+                    System.out.println(taal.getGoodResponse(punten));
+                } else {
+                    System.out.println(taal.getBadResponse(punten));
+                }
             }
-        }
         }
     }
 
