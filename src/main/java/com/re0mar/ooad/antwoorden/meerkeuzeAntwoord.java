@@ -1,5 +1,7 @@
 package com.re0mar.ooad.antwoorden;
 
+import static java.lang.Integer.parseInt;
+
 public class meerkeuzeAntwoord implements IAntwoord{
 
     private int correctOptie;
@@ -9,6 +11,10 @@ public class meerkeuzeAntwoord implements IAntwoord{
     }
 
     public boolean checkAntwoord(String antwoord) {
-        return Integer.parseInt(antwoord) == correctOptie;
+        try {
+            return parseInt(antwoord) == correctOptie;
+        } catch(NumberFormatException e) {
+            return false;
+        }
     }
 }

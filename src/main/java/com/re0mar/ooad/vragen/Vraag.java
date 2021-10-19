@@ -15,9 +15,7 @@ public abstract class Vraag {
         this.punten = punten;
     }
 
-    public boolean checkAntwoord(String antwoord) {
-        return true;
-    }
+    public abstract boolean checkAntwoord(String input);
 
     public IAntwoord getAntwoord() {
         return antwoord;
