@@ -1,12 +1,9 @@
 package com.re0mar.ooad;
 
-import com.re0mar.ooad.Punten.BasicPuntenSysteem;
-import com.re0mar.ooad.antwoorden.kortAntwoord;
-import com.re0mar.ooad.antwoorden.meerkeuzeAntwoord;
+import com.re0mar.ooad.Punten.*;
+import com.re0mar.ooad.antwoorden.*;
 import com.re0mar.ooad.taal.Nederlands;
-import com.re0mar.ooad.vragen.Vraag;
-import com.re0mar.ooad.vragen.kortVraag;
-import com.re0mar.ooad.vragen.meerkeuzeVraag;
+import com.re0mar.ooad.vragen.*;
 
 import java.util.ArrayList;
 import java.util.Objects;
