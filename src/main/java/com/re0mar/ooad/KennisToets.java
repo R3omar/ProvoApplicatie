@@ -1,7 +1,5 @@
 package com.re0mar.ooad;
 
-import com.re0mar.ooad.Punten.BasicPuntenSysteem;
-import com.re0mar.ooad.antwoorden.*;
 import com.re0mar.ooad.taal.ITaal;
 import com.re0mar.ooad.vragen.*;
 
@@ -28,6 +26,7 @@ public class KennisToets {
         Scanner sc = new Scanner(System.in);
         System.out.println(taal.getToetsIntro(code));
         if (Objects.equals(sc.next(), "start")) {
+            //ToDo Add some sort of timer system for more complex point systems
             for (Vraag v : vragenSet) {
                 System.out.println(v.getVraag());
                 String answer = sc.nextLine();

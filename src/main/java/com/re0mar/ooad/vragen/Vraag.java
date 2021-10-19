@@ -20,10 +20,6 @@ public abstract class Vraag {
 
     public abstract boolean checkAntwoord(String input);
 
-    public IAntwoord getAntwoord() {
-        return antwoord;
-    }
-
     public String getVraag() {
         return vraag;
     }

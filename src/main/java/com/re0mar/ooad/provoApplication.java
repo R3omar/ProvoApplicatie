@@ -24,7 +24,6 @@ public class provoApplication {
         vragenSet.add(new kortVraag(new Nederlands(), new kortAntwoord(new String[]{"antwoord", "answer"}), "Type answer", new BasicPuntenSysteem(9)));
         vragenSet.add(new kortVraag(new Nederlands(), new kortAntwoord(new String[]{"antwoord", "answer"}), "Type answer", new BasicPuntenSysteem(9)));
 
-
         toetsen.add(new KennisToets(new Nederlands(), "STE23", "ToetsA", vragenSet));
         toetsen.add(new KennisToets(new Nederlands(), "TER45", "ToetsB", vragenSet));
         toetsen.add(new KennisToets(new Nederlands(), "UIS12", "ToetsC", vragenSet));
@@ -42,7 +41,7 @@ public class provoApplication {
         while (true) {
             for (KennisToets toets : toetsen) {
                 if (Objects.equals(sc.next(), toets.getCode())) {
-                    System.out.println("Toets gevonden, toets selecteren? y/n ");
+                    System.out.println("Toets " + toets.getNaam() + " gevonden, toets selecteren? y/n ");
                     if (Objects.equals(sc.next(), "y")) toets.doeKennisToets();
                     else System.out.println("Voer een AUB een andere toetscode in:");
                 }
