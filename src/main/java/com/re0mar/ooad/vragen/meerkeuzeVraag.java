@@ -6,8 +6,6 @@ import com.re0mar.ooad.taal.ITaal;
 
 import java.util.Random;
 
-import static java.lang.Math.round;
-
 public class meerkeuzeVraag extends Vraag{
 
     private final String[] opties;
