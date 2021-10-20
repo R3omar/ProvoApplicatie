@@ -10,7 +10,6 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class provoApplication {
-
     private static final ArrayList<KennisToets> toetsen = new ArrayList<>();
 
     public static void main(String[] args) {
