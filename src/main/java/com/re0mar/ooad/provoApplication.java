@@ -24,12 +24,43 @@ public class provoApplication {
 
         Scanner sc = new Scanner(System.in);
 
+        boolean toetsActief;
+        int toetsLengte;
         //noinspection InfiniteLoopStatement
         while (true) {
+            System.out.println("Welkom bij provo, geef aub een naam in");
             if (sc.hasNext()) {
-                studentController.neemDeelAanToets(sc.next(), new Lokaal(new ToetsSessie(new KennisToets(new Nederlands(), "STE23", "ToetsA", vragenSet), 0, 0)));
-            }
+                String naam = sc.next();
+                System.out.println(studentController.neemDeelAanToets(naam, new Lokaal(new ToetsSessie(new KennisToets(new Nederlands(), "STE23", "ToetsA", vragenSet), 0, 0))));
+                toetsLengte = studentController.getToetsLength();
+                toetsActief = true;
 
+                for (int i = 0; i < toetsLengte; i++) {
+                    System.out.println("\n");
+                    System.out.println(studentController.getVraag(i));
+                    if (sc.hasNext()) {
+                        studentController.beantwoordVraag(i, sc.next());
+                    }
+                }
+
+                while (toetsActief) {
+                    System.out.println("\n");
+                    System.out.println(studentController.getEindeToets());
+                    if (sc.hasNext()) {
+                        String res = sc.next();
+                        if (Objects.equals(res, naam)) {
+                            System.out.println(studentController.beeindigToets());
+                            toetsActief = false;
+                        } else if (Integer.parseInt(res) <= toetsLengte) {
+                            System.out.println("\n");
+                            System.out.println(studentController.getVraag(Integer.parseInt(res) - 1));
+                            if (sc.hasNext()) {
+                                studentController.beantwoordVraag(Integer.parseInt(res) - 1, sc.next());
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

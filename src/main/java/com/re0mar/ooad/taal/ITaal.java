@@ -13,4 +13,10 @@ public interface ITaal {
     public String getBadResponse(int punt);
 
     public String getTestInfo(String name, String code);
+
+    public String getWelkom(String naam);
+
+    public String getEnd();
+
+    public String getSafe();
 }

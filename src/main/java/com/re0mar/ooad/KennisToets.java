@@ -46,6 +46,14 @@ public class KennisToets {
         return taal.getTestInfo(naam, code);
     }
 
+    public String getWelkom(String naam) {return taal.getWelkom(naam); }
+
+    public int getToetsLenght() {return vragenSet.size();}
+
+    public String getEinde() {return taal.getEnd();}
+
+    public String getSafeMessage() {return taal.getSafe();}
+
     public String getCode() {
         return code;
     }

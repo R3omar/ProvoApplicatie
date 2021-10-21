@@ -32,5 +32,17 @@ public class Nederlands implements ITaal{
         return "Toets: " + name + " Code: " + code;
     }
 
+    public String getWelkom(String naam) {
+        return "Welkom bij deze kennistoets " + naam;
+    }
+
+    public String getEnd() {
+        return "Toets afgerond, typ je naam om toets te beëindigen of geef het nummer in van een vraag om deze opnieuw te maken";
+    }
+
+    public String getSafe() {
+        return "Resultaten opgeslagen, deze applicatie vernietigt zichzelf binnen 10 seconden\n Provo is niet verantwoordelijk voor eventuele schade aan uw apparatuur\n\n";
+    }
+
 
 }
