@@ -21,6 +21,8 @@ public class KennisToets {
         this.vragenSet = vragen;
         }
 
+
+
     public void doeKennisToets() {
         int punten = 0;
         Scanner sc = new Scanner(System.in);
@@ -50,5 +52,9 @@ public class KennisToets {
 
     public String getNaam() {
         return naam;
+    }
+
+    public Vraag getVraag(int nr) {
+        return vragenSet.get(nr);
     }
 }
